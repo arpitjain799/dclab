@@ -34,8 +34,6 @@ jobs:
       if: matrix.extras == 'all'
       run: |
         pip install -e .[all]
-        # Install required R packages
-        python -c "import dclab; dclab.lme4.install_lme4()"
     - name: Install dclab with DCOR dependencies
       if: matrix.extras == 'dcor'
       run: |
